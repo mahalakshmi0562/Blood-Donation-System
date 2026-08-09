@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Request | Blood Donation System</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/forms.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="register.html">Donor Register</a></li>
+
+            <li><a href="search.html">Search Donor</a></li>
+
+            <li><a href="donors.html">Donors</a></li>
+
+            <li>
+
+                <a href="request.html"
+                   class="active">
+
+                    Blood Request
+
+                </a>
+
+            </li>
+
+            <li><a href="hospital.html">Hospitals</a></li>
+
+            <li><a href="compatibility.html">Compatibility</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+
+                <a href="login.html"
+                   class="login-btn">
+
+                    Login
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+
+    <h1>
+
+        Emergency Blood Request
+
+    </h1>
+
+    <p>
+
+        Fill out the form below to request blood during an emergency.
+
+    </p>
+
+</section>
+
+<!-- ================= REQUEST FORM ================= -->
+
+<section class="register-section">
+
+<div class="form-container">
+
+<div class="form-box">
+
+<div class="form-header">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h2>
+
+Blood Request Form
+
+</h2>
+
+<p>
+
+Please enter patient and hospital details carefully.
+
+</p>
+
+</div>
+
+<form id="requestForm">
+
+<!-- Patient Details -->
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+Patient Name
+
+</label>
+
+<input
+type="text"
+id="patientName"
+placeholder="Enter Patient Name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Patient Age
+
+</label>
+
+<input
+type="number"
+id="patientAge"
+placeholder="Enter Age"
+required>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+Gender
+
+</label>
+
+<select id="gender" required>
+
+<option value="">
+
+Select Gender
+
+</option>
+
+<option>
+
+Male
+
+</option>
+
+<option>
+
+Female
+
+</option>
+
+<option>
+
+Other
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Blood Group Needed
+
+</label>
+
+<select id="bloodGroup" required>
+
+<option value="">
+
+Select Blood Group
+
+</option>
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+Units Required
+
+</label>
+
+<input
+type="number"
+id="units"
+placeholder="Required Blood Units"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Required Date
+
+</label>
+
+<input
+type="date"
+id="requiredDate"
+required>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>
+
+Hospital Name
+
+</label>
+
+<input
+type="text"
+id="hospital"
+placeholder="Hospital Name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+City
+
+</label>
+
+<input
+type="text"
+id="city"
+placeholder="City"
+required>
+
+</div>
+
+</div>
+<div class="form-row">
+
+    <div class="form-group">
+
+        <label>
+
+            Contact Person
+
+        </label>
+
+        <input
+        type="text"
+        id="contactPerson"
+        placeholder="Enter Contact Person"
+        required>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            Mobile Number
+
+        </label>
+
+        <input
+        type="tel"
+        id="phone"
+        placeholder="Enter Mobile Number"
+        required>
+
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group">
+
+        <label>
+
+            Email Address
+
+        </label>
+
+        <input
+        type="email"
+        id="email"
+        placeholder="Enter Email Address">
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            Emergency Level
+
+        </label>
+
+        <select
+        id="priority"
+        required>
+
+            <option value="">
+
+                Select Priority
+
+            </option>
+
+            <option>
+
+                Normal
+
+            </option>
+
+            <option>
+
+                Urgent
+
+            </option>
+
+            <option>
+
+                Critical
+
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <label>
+
+        Hospital Address
+
+    </label>
+
+    <textarea
+    id="address"
+    rows="4"
+    placeholder="Enter Hospital Address"
+    required></textarea>
+
+</div>
+
+<div class="form-group">
+
+    <label>
+
+        Additional Information
+
+    </label>
+
+    <textarea
+    id="message"
+    rows="5"
+    placeholder="Describe the patient's condition or additional requirements"></textarea>
+
+</div>
+
+<div class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="agree"
+                        required>
+
+                    <label for="agree">
+
+                         I confirm that the above information is correct.
+       
+    </label>
+
+</div>
+
+<div class="button-group">
+
+    <button
+    type="submit"
+    class="btn btn-primary">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        Submit Request
+
+    </button>
+
+    <button
+    type="reset"
+    class="btn btn-secondary">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        Reset
+
+    </button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EMERGENCY INFORMATION ================= -->
+
+<section class="services">
+
+    <div class="section-title">
+
+        <h2>
+
+            Emergency Blood Request
+
+        </h2>
+
+        <p>
+
+            Follow these important guidelines while requesting blood.
+
+        </p>
+
+    </div>
+
+    <div class="service-container">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-phone-volume"></i>
+
+            <h3>
+
+                Contact Immediately
+
+            </h3>
+
+            <p>
+
+                Contact nearby hospitals and available donors immediately
+                after submitting the request.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h3>
+
+                Hospital Verification
+
+            </h3>
+
+            <p>
+
+                Ensure that the blood request is verified by an authorized
+                hospital or blood bank.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>
+
+                Save Lives
+
+            </h3>
+
+            <p>
+
+                Timely blood requests help save lives during emergencies.
+                Always provide accurate information.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <h2>
+
+            Every Drop Counts
+
+        </h2>
+
+        <p>
+
+            Your blood request can reach registered donors quickly.
+            Together we can save precious lives by acting at the right time.
+
+        </p>
+
+        <a href="search.html"
+
+           class="btn btn-primary">
+
+            Search Blood Donors
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- About -->
+
+        <div class="footer-about">
+
+            <h3>
+
+                Blood Donation System
+
+            </h3>
+
+            <p>
+
+                We connect voluntary blood donors with patients in need.
+                Together we can save lives through timely blood donation.
+
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-links">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="register.html">Register</a></li>
+
+                <li><a href="search.html">Search Donor</a></li>
+
+                <li><a href="donors.html">Donors</a></li>
+
+                <li><a href="request.html">Blood Request</a></li>
+
+                <li><a href="hospital.html">Hospitals</a></li>
+
+                <li><a href="compatibility.html">Compatibility</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Social Media -->
+
+        <div class="footer-social">
+
+            <h3>
+
+                Follow Us
+
+            </h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-twitter"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Blood Donation System. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!-- ================= BACK TO TOP BUTTON ================= -->
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/app.js"></script>
+
+<script src="js/request.js"></script>
+
+</body>
+
+</html>

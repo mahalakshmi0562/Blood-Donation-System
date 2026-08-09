@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registered Donors | Blood Donation System</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="register.html">Donor Register</a>
+            </li>
+
+            <li>
+                <a href="search.html">Search Donor</a>
+            </li>
+
+            <li>
+                <a href="donors.html" class="active">
+                    Donors
+                </a>
+            </li>
+
+            <li>
+                <a href="request.html">
+                    Blood Request
+                </a>
+            </li>
+
+            <li>
+                <a href="hospital.html">
+                    Hospitals
+                </a>
+            </li>
+
+            <li>
+                <a href="compatibility.html">
+                    Compatibility
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+
+    <h1>
+
+        Registered Blood Donors
+
+    </h1>
+
+    <p>
+
+        View all registered blood donors available in our Blood Donation System.
+
+    </p>
+
+</section>
+
+<!-- ================= DONOR LIST ================= -->
+
+<section class="statistics">
+
+    <div class="section-title">
+
+        <h2>
+
+            Registered Donors
+
+        </h2>
+
+        <p>
+
+            The donor list below is automatically loaded from registered users.
+
+        </p>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3 id="totalDonors">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Total Donors
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3 id="availableDonors">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Available Donors
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-city"></i>
+
+            <h3 id="cityCount">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Cities Covered
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-droplet"></i>
+
+            <h3>
+
+                8
+
+            </h3>
+
+            <p>
+
+                Blood Groups
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="form-box mt-40">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>
+
+                    Search by Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="searchName"
+                    placeholder="Enter donor name">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Blood Group
+
+                </label>
+
+                <select id="bloodFilter">
+
+                    <option value="">
+
+                        All Blood Groups
+
+                    </option>
+
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Donor Cards -->
+
+    <div id="donorContainer"
+
+         class="grid mt-40">
+        <!-- Dynamic Donor Cards Will Be Added Here -->
+
+    </div>
+
+    <!-- No Donors Message -->
+
+    <div id="noDonors"
+
+         class="card text-center hidden mt-40">
+
+        <i class="fa-solid fa-circle-info"
+
+           style="font-size:60px;color:#d62828;margin-bottom:20px;"></i>
+
+        <h2>
+
+            No Registered Donors Yet
+
+        </h2>
+
+        <p>
+
+            No donor information is available.
+            Please register to become a blood donor.
+
+        </p>
+
+        <br>
+
+        <a href="register.html"
+
+           class="btn btn-primary">
+
+            Register Now
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= DONATION GUIDELINES ================= -->
+
+<section class="services">
+
+    <div class="section-title">
+
+        <h2>
+
+            Blood Donation Guidelines
+
+        </h2>
+
+        <p>
+
+            Follow these simple guidelines before donating blood.
+
+        </p>
+
+    </div>
+
+    <div class="service-container">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <h3>
+
+                Stay Healthy
+
+            </h3>
+
+            <p>
+
+                Eat healthy food, drink plenty of water and
+                sleep well before donating blood.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            <h3>
+
+                Medical Check
+
+            </h3>
+
+            <p>
+
+                Every donor must complete a basic medical
+                examination before blood donation.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-hand-holding-droplet"></i>
+
+            <h3>
+
+                Save Lives
+
+            </h3>
+
+            <p>
+
+                One blood donation can save up to
+                three lives.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= INLINE JAVASCRIPT ================= -->
+
+<script>
+
+const donorContainer =
+document.getElementById("donorContainer");
+
+const noDonors =
+document.getElementById("noDonors");
+
+const searchName =
+document.getElementById("searchName");
+
+const bloodFilter =
+document.getElementById("bloodFilter");
+
+let donors =
+JSON.parse(localStorage.getItem("donors")) || [];
+
+displayDonors(donors);
+
+searchName.addEventListener("keyup",filterDonors);
+
+bloodFilter.addEventListener("change",filterDonors);
+
+function filterDonors(){
+
+    const name =
+    searchName.value.toLowerCase();
+
+    const blood =
+    bloodFilter.value;
+
+    const filtered =
+    donors.filter(function(donor){
+
+        const matchName =
+        donor.fullName
+        .toLowerCase()
+        .includes(name);
+
+        const matchBlood =
+        blood==="" ||
+        donor.bloodGroup===blood;
+
+        return matchName && matchBlood;
+
+    });
+
+    displayDonors(filtered);
+
+}
+
+function displayDonors(list){
+
+    donorContainer.innerHTML="";
+
+    if(list.length===0){
+
+        noDonors.classList.remove("hidden");
+
+        document.getElementById("totalDonors").textContent=0;
+
+        document.getElementById("availableDonors").textContent=0;
+
+        document.getElementById("cityCount").textContent=0;
+
+        return;
+
+    }
+
+    noDonors.classList.add("hidden");
+
+    let available=0;
+
+    let cities=[];
+
+    list.forEach(function(donor){
+
+        if(donor.available){
+
+            available++;
+
+        }
+
+        if(!cities.includes(donor.city)){
+
+            cities.push(donor.city);
+
+        }
+
+        donorContainer.innerHTML+=`
+
+<div class="card">
+
+<h3>${donor.fullName}</h3>
+
+<p><strong>Blood Group :</strong> ${donor.bloodGroup}</p>
+
+<p><strong>Age :</strong> ${donor.age}</p>
+
+<p><strong>Gender :</strong> ${donor.gender}</p>
+
+<p><strong>City :</strong> ${donor.city}</p>
+
+<p><strong>Phone :</strong> ${donor.phone}</p>
+
+<p><strong>Email :</strong> ${donor.email}</p>
+
+<p>
+
+<strong>Status :</strong>
+
+<span style="color:${donor.available?'green':'red'}">
+
+${donor.available?'Available':'Not Available'}
+
+</span>
+
+</p>
+
+<a href="tel:${donor.phone}"
+
+class="btn btn-primary mt-20">
+
+Call Donor
+
+</a>
+
+</div>
+
+`;
+
+    });
+
+    document.getElementById("totalDonors").textContent=list.length;
+
+    document.getElementById("availableDonors").textContent=available;
+
+    document.getElementById("cityCount").textContent=cities.length;
+
+}
+
+</script>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+
+    <p class="copyright">
+
+        © 2026 Blood Donation System. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

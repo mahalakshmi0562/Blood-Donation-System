@@ -1,0 +1,656 @@
+/* ================================
+   GLOBAL ANIMATION SETTINGS
+================================ */
+
+* {
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+
+/* ================================
+   FADE IN ANIMATION
+================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+
+/* ================================
+   SLIDE FROM LEFT
+================================ */
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.slide-left {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+
+/* ================================
+   SLIDE FROM RIGHT
+================================ */
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.slide-right {
+    animation: slideRight 0.8s ease forwards;
+}
+
+
+/* ================================
+   SCALE POP EFFECT
+================================ */
+
+@keyframes scaleUp {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.scale-up {
+    animation: scaleUp 0.6s ease forwards;
+}
+
+
+/* ================================
+   BUTTON HOVER ANIMATION
+================================ */
+
+.btn {
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+
+/* ================================
+   CARD HOVER EFFECT
+================================ */
+
+.card {
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+    0 15px 25px rgba(0,0,0,0.15);
+
+}
+/* ================================
+   HEARTBEAT ANIMATION
+   (For Blood Drop Icon / Logo)
+================================ */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.heart-beat {
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+
+
+/* ================================
+   FLOATING IMAGE ANIMATION
+================================ */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+.float {
+
+    animation: floating 3s ease-in-out infinite;
+
+}
+
+
+
+/* ================================
+   PULSE EFFECT
+   (Emergency Blood Request)
+================================ */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+        box-shadow:
+        0 0 0 0 rgba(220, 0, 0, 0.7);
+
+    }
+
+
+    70% {
+
+        transform: scale(1.05);
+
+        box-shadow:
+        0 0 0 20px rgba(220, 0, 0, 0);
+
+    }
+
+
+    100% {
+
+        transform: scale(1);
+
+        box-shadow:
+        0 0 0 0 rgba(220, 0, 0, 0);
+
+    }
+
+}
+
+
+
+.pulse {
+
+    animation: pulse 2s infinite;
+
+}
+
+
+
+/* ================================
+   LOADING SPINNER
+================================ */
+
+@keyframes rotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+
+.loader {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 5px solid #ddd;
+
+    border-top: 5px solid red;
+
+    border-radius: 50%;
+
+    animation: rotate 1s linear infinite;
+
+}
+
+
+
+/* ================================
+   EMERGENCY ALERT BLINK
+================================ */
+
+@keyframes blink {
+
+    0% {
+
+        opacity: 1;
+
+    }
+
+
+    50% {
+
+        opacity: 0.3;
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.alert-blink {
+
+    animation: blink 1s infinite;
+
+}
+
+
+
+/* ================================
+   TEXT REVEAL ANIMATION
+================================ */
+
+@keyframes textShow {
+
+    from {
+
+        opacity: 0;
+
+        letter-spacing: 10px;
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        letter-spacing: normal;
+
+    }
+
+}
+
+
+
+.text-animation {
+
+    animation: textShow 1s ease forwards;
+
+}
+/* ================================
+   SCROLL REVEAL ANIMATION
+================================ */
+
+@keyframes reveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.reveal {
+
+    animation: reveal 1s ease forwards;
+
+}
+
+
+
+/* ================================
+   IMAGE ZOOM EFFECT
+================================ */
+
+.image-zoom {
+
+    overflow: hidden;
+
+}
+
+
+.image-zoom img {
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.image-zoom:hover img {
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* ================================
+   NAVBAR DROP ANIMATION
+================================ */
+
+@keyframes navDrop {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+.navbar {
+
+    animation: navDrop 0.8s ease forwards;
+
+}
+
+
+
+/* ================================
+   GLASS CARD ANIMATION
+================================ */
+
+.glass-card {
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s ease;
+
+}
+
+
+
+.glass-card:hover {
+
+    transform: translateY(-8px);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+
+/* ================================
+   GRADIENT MOVEMENT
+================================ */
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+
+
+.gradient-animation {
+
+    background-size: 200% 200%;
+
+    animation: gradientMove 5s ease infinite;
+
+}
+
+
+
+/* ================================
+   BUTTON SHINE EFFECT
+================================ */
+
+@keyframes shine {
+
+    from {
+
+        background-position: -200%;
+
+    }
+
+
+    to {
+
+        background-position: 200%;
+
+    }
+
+}
+
+
+
+.btn-shine {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.btn-shine::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 50%;
+
+    height: 100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+
+    animation: shine 2s infinite;
+
+}
+
+
+
+/* ================================
+   COUNTER NUMBER ANIMATION
+================================ */
+
+@keyframes countUp {
+
+    from {
+
+        transform: scale(0);
+
+        opacity: 0;
+
+    }
+
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.counter {
+
+    animation: countUp 1s ease forwards;
+
+}
+
+
+
+
+/* ================================
+   BACK TO TOP BUTTON
+================================ */
+
+@keyframes topButton {
+
+    0% {
+
+        transform: translateY(20px);
+
+        opacity: 0;
+
+    }
+
+
+    100% {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.back-top {
+
+    animation: topButton 0.5s ease;
+
+}
+

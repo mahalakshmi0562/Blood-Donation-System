@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Registration | Blood Donation System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="register.html" class="active">Donor Register</a></li>
+
+            <li><a href="search.html">Search Donor</a></li>
+
+            <li><a href="request.html">Blood Request</a></li>
+
+            <li><a href="hospital.html">Hospitals</a></li>
+
+            <li><a href="compatibility.html">Compatibility</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+
+    <h1>Become a Blood Donor</h1>
+
+    <p>
+        Every donation saves lives. Register today and make a difference.
+    </p>
+
+</section>
+
+<!-- ================= REGISTRATION SECTION ================= -->
+
+<section class="register-section">
+
+    <div class="form-container">
+
+        <div class="form-box">
+
+            <div class="form-header">
+
+                <i class="fa-solid fa-heart-circle-plus"></i>
+
+                <h2>Donor Registration Form</h2>
+
+                <p>
+                    Fill in your details to become a registered blood donor.
+                </p>
+
+            </div>
+
+            <form id="donorForm">
+
+                <!-- Row 1 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+
+                            Full Name *
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="age">
+
+                            Age *
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            min="18"
+                            max="65"
+                            placeholder="Age"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Gender *
+
+                        </label>
+
+                        <select id="gender" required>
+
+                            <option value="">Select Gender</option>
+
+                            <option>Male</option>
+
+                            <option>Female</option>
+
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Blood Group *
+
+                        </label>
+
+                        <select id="bloodGroup" required>
+
+                            <option value="">Select Blood Group</option>
+
+                            <option>A+</option>
+
+                            <option>A-</option>
+
+                            <option>B+</option>
+
+                            <option>B-</option>
+
+                            <option>AB+</option>
+
+                            <option>AB-</option>
+
+                            <option>O+</option>
+
+                            <option>O-</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- Row 3 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Phone Number *
+
+                        </label>
+
+                        <input
+                        id="phone"
+                            type="tel"
+                            maxlength="10"
+                            placeholder="Enter phone number"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email">
+
+                    </div>
+
+                </div>
+
+                <!-- Row 4 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            City *
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter your city"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Last Donation Date
+
+                        </label>
+
+                        <input type="date" id="date">
+
+                    </div>
+
+                </div>
+
+                <!-- Address -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Address *
+
+                    </label>
+
+                    <textarea
+                        rows="4"
+                        id="address"
+                        placeholder="Enter complete address"
+                        required></textarea>
+
+                </div>
+
+                <!-- Medical Information -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Any Medical Conditions?
+
+                    </label>
+
+                    <textarea
+                        rows="3"
+                        placeholder="If yes, mention here"></textarea>
+
+                </div>
+
+                <!-- Checkbox -->
+
+                <div class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="agree"
+                        required>
+
+                    <label for="agree">
+
+                        I confirm that the above information is true and I am willing to donate blood voluntarily.
+
+                    </label>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="button-group">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Register
+
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+    <div class="section-title">
+
+        <h2>Why Become a Blood Donor?</h2>
+
+        <p>
+            Blood donation is one of the greatest gifts you can give.
+        </p>
+
+    </div>
+
+    <div class="benefit-container">
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Save Lives</h3>
+
+            <p>
+                One donation can help up to three patients.
+            </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-hand-holding-heart"></i>
+
+            <h3>Community Service</h3>
+
+            <p>
+                Help hospitals maintain emergency blood supplies.
+            </p>
+
+        </div>
+
+        <div class="benefit-card">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h3>Health Check</h3>
+
+            <p>
+                Every donation includes a free health screening.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>Blood Donation System</h3>
+
+            <p>
+
+                Together we can save lives by donating blood.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="register.html">Register</a></li>
+
+                <li><a href="search.html">Search</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-twitter"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Blood Donation System. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+
+</html>

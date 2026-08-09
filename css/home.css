@@ -1,0 +1,579 @@
+/* ==========================================
+   HOME PAGE STYLES
+   File: css/home.css
+========================================== */
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+    background:linear-gradient(135deg,#fff5f5,#ffecec);
+    overflow:hidden;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(214,40,40,0.08);
+    border-radius:50%;
+    top:-120px;
+    right:-100px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(214,40,40,0.05);
+    border-radius:50%;
+    bottom:-80px;
+    left:-80px;
+}
+
+.hero-content{
+    animation:slideLeft 1s ease;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:var(--primary);
+}
+
+.hero-content p{
+    max-width:600px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    position:relative;
+    z-index:2;
+    animation:slideRight 1s ease;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    margin:auto;
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+/* ==========================================
+   SERVICES SECTION
+========================================== */
+
+.services{
+    background:#ffffff;
+}
+
+.service-container{
+    margin-top:50px;
+}
+
+.service-card{
+    border-top:5px solid transparent;
+}
+
+.service-card:hover{
+    border-top:5px solid var(--primary);
+}
+
+.service-card i{
+    transition:.4s;
+}
+
+.service-card:hover i{
+    transform:scale(1.15) rotate(8deg);
+}
+
+.service-card h3{
+    margin:20px 0 15px;
+    color:var(--black);
+}
+
+.service-card p{
+    color:var(--gray);
+    margin-bottom:20px;
+}
+
+.service-card a{
+    display:inline-block;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
+
+.service-card a:hover{
+    letter-spacing:1px;
+}
+
+/* ==========================================
+   EMERGENCY SECTION
+========================================== */
+
+.emergency{
+    position:relative;
+    overflow:hidden;
+}
+
+.emergency::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    top:-40px;
+    left:-40px;
+}
+
+.emergency::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+    bottom:-60px;
+    right:-60px;
+}
+
+.emergency-content{
+    position:relative;
+    z-index:2;
+}
+
+.emergency h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.emergency p{
+    max-width:700px;
+    margin:0 auto 30px;
+}
+
+/* ==========================================
+   HERO BUTTON EFFECT
+========================================== */
+
+.hero-buttons .btn{
+    transition:all .3s ease;
+}
+
+.hero-buttons .btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+/* ==========================================
+   DONATION PROCESS
+========================================== */
+
+.process{
+    background:#fafafa;
+}
+
+.process-container{
+    margin-top:50px;
+}
+
+.process-card{
+    overflow:hidden;
+}
+
+.process-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:var(--primary);
+    transform:scaleX(0);
+    transition:.4s;
+}
+
+.process-card:hover::before{
+    transform:scaleX(1);
+}
+
+.process-card i{
+    transition:.4s;
+}
+
+.process-card:hover i{
+    transform:scale(1.15);
+}
+
+.step-number{
+    transition:.4s;
+}
+
+.process-card:hover .step-number{
+    transform:rotate(360deg);
+}
+
+/* ==========================================
+   BLOOD GROUP SECTION
+========================================== */
+
+.blood-groups{
+    background:#ffffff;
+}
+
+.blood-group-container{
+    margin-top:50px;
+}
+
+.blood-card{
+    cursor:pointer;
+    transition:all .4s ease;
+}
+
+.blood-card:hover{
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 12px 25px rgba(214,40,40,.30);
+}
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.statistics{
+    background:#fff8f8;
+}
+
+.stats-container{
+    margin-top:50px;
+}
+
+.stat-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.stat-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:4px;
+    background:var(--primary);
+    transform:scaleX(0);
+    transition:.4s;
+}
+
+.stat-card:hover::before{
+    transform:scaleX(1);
+}
+
+.stat-card i{
+    transition:.4s;
+}
+
+.stat-card:hover i{
+    transform:scale(1.15);
+}
+
+.stat-card h3{
+    font-weight:700;
+}
+
+/* ==========================================
+   CALL TO ACTION
+========================================== */
+
+.cta{
+    position:relative;
+    overflow:hidden;
+}
+
+.cta::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-80px;
+    left:-60px;
+}
+
+.cta::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    right:-80px;
+    bottom:-80px;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+}
+
+/* ==========================================
+   FAQ SECTION
+========================================== */
+
+.faq-card{
+    border-left:4px solid transparent;
+}
+
+.faq-card:hover{
+    border-left:4px solid var(--primary);
+}
+
+.faq-card h3{
+    transition:.3s;
+}
+
+.faq-card:hover h3{
+    color:var(--secondary);
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact-box{
+    transition:all .4s ease;
+}
+
+.contact-box:hover{
+    transform:translateY(-10px);
+}
+
+.contact-box i{
+    transition:.4s;
+}
+
+.contact-box:hover i{
+    transform:rotate(12deg) scale(1.15);
+}
+
+/* ==========================================
+   SECTION FADE ANIMATION
+========================================== */
+
+.services,
+.process,
+.blood-groups,
+.statistics,
+.cta,
+.faq-preview,
+.contact-home{
+    animation:fadeUp .8s ease;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* ---------- Tablets ---------- */
+
+@media (max-width:992px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .hero-content{
+        order:2;
+    }
+
+    .hero-image{
+        order:1;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-content p{
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .blood-group-container{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:100px 20px 60px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .hero-image img{
+        max-width:350px;
+    }
+
+    .service-container,
+    .process-container,
+    .stats-container,
+    .faq-container,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .blood-group-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .blood-card{
+        width:90px;
+        height:90px;
+        font-size:22px;
+    }
+
+    .emergency h2,
+    .cta h2{
+        font-size:32px;
+    }
+
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width:480px){
+
+    .hero-content h1{
+        font-size:30px;
+        line-height:1.3;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons .btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .blood-group-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .blood-card{
+        width:75px;
+        height:75px;
+        font-size:18px;
+    }
+
+    .service-card,
+    .process-card,
+    .stat-card,
+    .faq-card,
+    .contact-box{
+        padding:20px;
+    }
+
+}
+
+/* ==========================================
+   SMOOTH HOVER EFFECTS
+========================================== */
+
+.service-card,
+.process-card,
+.stat-card,
+.faq-card,
+.contact-box,
+.blood-card{
+    transition:all .35s ease;
+}
+
+.service-card:hover,
+.process-card:hover,
+.stat-card:hover,
+.faq-card:hover,
+.contact-box:hover{
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+.hero,
+.services,
+.emergency,
+.process,
+.blood-groups,
+.statistics,
+.cta,
+.faq-preview,
+.contact-home{
+    position:relative;
+}
+
+/* ==========================================
+   IMAGE QUALITY
+========================================== */
+
+.hero img{
+    user-select:none;
+    pointer-events:none;
+}
+
+/* ==========================================
+   BUTTON IMPROVEMENTS
+========================================== */
+
+.btn{
+    letter-spacing:.5px;
+}
+
+.btn:active{
+    transform:scale(.97);
+}
+
+/* ==========================================
+   END OF HOME.CSS
+========================================== */

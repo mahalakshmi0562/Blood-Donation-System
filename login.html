@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Member Login | Blood Donation System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* ==============================
+           LOGIN PAGE
+        ============================== */
+
+        .login-password-box {
+            position: relative;
+        }
+
+        .login-password-box input {
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        .show-password-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 18px;
+            color: #777;
+        }
+
+        .show-password-btn:hover {
+            color: #d62828;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: #d62828;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==============================
+           MODAL
+        ============================== */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.65);
+
+            z-index: 9999;
+
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: block;
+        }
+
+        .modal-box {
+
+            width: 90%;
+            max-width: 450px;
+
+            background: white;
+
+            margin: 80px auto;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            position: relative;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,.3);
+
+            animation: popup .3s ease;
+        }
+
+        .modal-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        #closeModal {
+
+            font-size: 30px;
+
+            color: #d62828;
+
+            cursor: pointer;
+
+            font-weight: bold;
+        }
+
+        #closeModal:hover {
+            color: #9d0208;
+        }
+
+        /* OTP popup */
+
+        .otp-popup {
+
+            display: none;
+
+            position: fixed;
+
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0,.65);
+
+            z-index: 10000;
+        }
+
+        .otp-popup.show {
+            display: block;
+        }
+
+        .otp-content {
+
+            width: 380px;
+
+            max-width: 90%;
+
+            background: white;
+
+            margin: 150px auto;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,.3);
+
+            animation: popup .3s ease;
+        }
+
+        .otp-content i {
+
+            font-size: 65px;
+
+            color: #28a745;
+
+            margin-bottom: 15px;
+        }
+
+        .otp-content h2 {
+            margin-bottom: 15px;
+        }
+
+        .otp-content p {
+
+            line-height: 28px;
+
+            margin-bottom: 20px;
+        }
+
+        /* ==============================
+           ANIMATION
+        ============================== */
+
+        @keyframes popup {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(.8);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="register.html">Donor Register</a>
+            </li>
+
+            <li>
+                <a href="search.html">Search Donor</a>
+            </li>
+
+            <li>
+                <a href="request.html">Blood Request</a>
+            </li>
+
+            <li>
+                <a href="hospital.html">Hospitals</a>
+            </li>
+
+            <li>
+                <a href="compatibility.html">Compatibility</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+            <li>
+                <a href="login.html"
+                   class="active login-btn">
+
+                    Login
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+
+    <h1>Member Login</h1>
+
+    <p>
+        Only registered members can access the Admin Dashboard.
+    </p>
+
+</section>
+
+
+<!-- ================= LOGIN FORM ================= -->
+
+<section class="register-section">
+
+    <div class="form-container">
+
+        <div class="form-box">
+
+            <div class="form-header">
+
+                <i class="fa-solid fa-user-lock"></i>
+
+                <h2>Login</h2>
+
+                <p>
+                    Enter your registered email and password.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter registered email"
+                        required>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <div class="login-password-box">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter password"
+                            required>
+
+                        <button
+                            type="button"
+                            id="showPasswordBtn"
+                            class="show-password-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORGOT PASSWORD -->
+
+                <div class="forgot-password">
+
+                    <a href="#" id="forgotBtn">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <div class="button-group">
+
+                    <button
+                        type="submit"
+                        id="loginBtn"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </button>
+
+                </div>
+
+
+                <!-- REGISTER -->
+
+                <p style="text-align:center; margin-top:20px;">
+
+                    New User?
+
+                    <a href="reg.html"
+                       style="color:#d62828;font-weight:bold;">
+
+                        Register Here
+
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FORGOT PASSWORD MODAL ================= -->
+
+<div id="forgotModal" class="modal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h2>
+                Forgot Password
+            </h2>
+
+            <span id="closeModal">
+                &times;
+            </span>
+
+        </div>
+
+
+        <p>
+            Choose how you want to receive the OTP.
+        </p>
+
+
+        <!-- METHOD -->
+
+        <div class="form-group">
+
+            <label for="otpMethod">
+                OTP Method
+            </label>
+
+            <select id="otpMethod">
+
+                <option value="">
+                    Select Method
+                </option>
+
+                <option value="email">
+                    Email OTP
+                </option>
+
+                <option value="phone">
+                    Phone OTP
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group"
+             id="emailDiv"
+             style="display:none;">
+
+            <label for="forgotEmail">
+                Registered Email
+            </label>
+
+            <input
+                type="email"
+                id="forgotEmail"
+                placeholder="Enter registered email">
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="form-group"
+             id="phoneDiv"
+             style="display:none;">
+
+            <label for="forgotPhone">
+                Registered Phone
+            </label>
+
+            <input
+                type="tel"
+                id="forgotPhone"
+                maxlength="10"
+                placeholder="Enter registered phone">
+
+        </div>
+
+
+        <!-- SEND OTP -->
+
+        <div class="button-group">
+
+            <button
+                type="button"
+                id="sendOtpBtn"
+                class="btn btn-primary">
+
+                Send OTP
+
+            </button>
+
+        </div>
+
+
+        <!-- OTP -->
+
+        <div id="otpBox"
+             style="display:none;">
+
+            <div class="form-group">
+
+                <label for="otpInput">
+                    Enter OTP
+                </label>
+
+                <input
+                    type="text"
+                    id="otpInput"
+                    maxlength="6"
+                    placeholder="Enter OTP">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="newPassword">
+                    New Password
+                </label>
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Enter new password">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm new password">
+
+            </div>
+
+
+            <div class="button-group">
+
+                <button
+                    type="button"
+                    id="verifyOtpBtn"
+                    class="btn btn-primary">
+
+                    Reset Password
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= OTP SUCCESS POPUP ================= -->
+
+<div id="otpPopup" class="otp-popup">
+
+    <div class="otp-content">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <h2>
+            OTP Sent Successfully
+        </h2>
+
+        <p id="otpMessage"></p>
+
+        <button
+            type="button"
+            id="closeOtpPopup"
+            class="btn btn-primary">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN INFORMATION ================= -->
+
+<section class="services">
+
+    <div class="section-title">
+
+        <h2>
+            Login Information
+        </h2>
+
+        <p>
+            Only registered users can login to the Admin Dashboard.
+        </p>
+
+    </div>
+
+
+    <div class="service-container">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <h3>
+                Registered Users
+            </h3>
+
+            <p>
+                Create an account from Member Registration and
+                login using your registered email and password.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-key"></i>
+
+            <h3>
+                Forgot Password
+            </h3>
+
+            <p>
+                Reset your password using Email OTP or Phone OTP
+                simulation.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>
+                New User
+            </h3>
+
+            <p>
+                Don't have an account?
+                Register first before logging in.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>
+                Blood Donation System
+            </h3>
+
+            <p>
+                Donate Blood, Save Lives.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="register.html">Donor Register</a>
+                </li>
+
+                <li>
+                    <a href="reg.html">Member Register</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 Blood Donation System.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/app.js"></script>
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>
