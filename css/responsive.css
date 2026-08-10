@@ -158,6 +158,7 @@
         background:#fff;
         box-shadow:0 8px 20px rgba(0,0,0,.1);
         display:none;
+        z-index:9999;
     }
 
     .navbar.active{
@@ -258,19 +259,57 @@
     .register-container,
     .request-container,
     .login-container,
-    .contact-form{
-        width:100%;
-        padding:25px;
+    .contact-form {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
-    .form-row{
-        grid-template-columns:1fr;
+    .form-box {
+        width: 100%;
+        padding:25px 20px;
+        box-sizing: border-box;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     input,
     select,
-    textarea{
+    textarea {
         width:100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ================= BUTTONS ================= */
+
+    .button-group{
+        width:100%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .button-group .btn{
+        width:100%;
+        min-width:0;
     }
 
     /* ================= SEARCH PAGE ================= */
@@ -319,249 +358,249 @@
     }
 
 }
-/* ==========================================
-   SMALL MOBILE DEVICES (480px)
-========================================== */
+    /* ==========================================
+    SMALL MOBILE DEVICES (480px)
+    ========================================== */
 
-@media (max-width:480px){
+    @media (max-width:480px){
 
-    /* ---------- Header ---------- */
+        /* ---------- Header ---------- */
 
-    .logo img{
-        width:42px;
-        height:42px;
+        .logo img{
+            width:42px;
+            height:42px;
+        }
+
+        .logo h2{
+            font-size:18px;
+        }
+
+        /* ---------- Hero ---------- */
+
+        .hero{
+            padding-top:100px;
+        }
+
+        .hero-content h1{
+            font-size:30px;
+            line-height:1.3;
+        }
+
+        .hero-content p{
+            font-size:15px;
+        }
+
+        .hero-image img{
+            max-width:260px;
+        }
+
+        /* ---------- Section Title ---------- */
+
+        .section-title h2{
+            font-size:28px;
+        }
+
+        .section-title p{
+            font-size:15px;
+        }
+
+        /* ---------- Buttons ---------- */
+
+        .btn{
+            width:100%;
+            padding:14px;
+            text-align:center;
+        }
+
+        /* ---------- Blood Groups ---------- */
+
+        .blood-group-container{
+            grid-template-columns:repeat(2,1fr);
+            gap:15px;
+        }
+
+        .blood-card{
+            width:75px;
+            height:75px;
+            font-size:18px;
+        }
+
+        /* ---------- Cards ---------- */
+
+        .service-card,
+        .process-card,
+        .stat-card,
+        .faq-card,
+        .contact-box,
+        .hospital-card,
+        .donor-card{
+
+            padding:18px;
+
+        }
+
+        /* ---------- Forms ---------- */
+
+        input,
+        select,
+        textarea{
+            font-size:15px;
+        }
+
+        /* ---------- Footer ---------- */
+
+        .footer{
+            padding:40px 20px 20px;
+        }
+
+        .footer h3{
+            font-size:20px;
+        }
+
+        .footer p,
+        .footer a{
+            font-size:14px;
+        }
+
     }
 
-    .logo h2{
-        font-size:18px;
-    }
+    /* ==========================================
+    ADMIN PAGE
+    ========================================== */
 
-    /* ---------- Hero ---------- */
+    @media (max-width:768px){
 
-    .hero{
-        padding-top:100px;
-    }
+        .admin-container{
+            width:100%;
+            overflow-x:auto;
+        }
 
-    .hero-content h1{
-        font-size:30px;
-        line-height:1.3;
-    }
+        .admin-table{
+            min-width:700px;
+        }
 
-    .hero-content p{
-        font-size:15px;
-    }
-
-    .hero-image img{
-        max-width:260px;
-    }
-
-    /* ---------- Section Title ---------- */
-
-    .section-title h2{
-        font-size:28px;
-    }
-
-    .section-title p{
-        font-size:15px;
-    }
-
-    /* ---------- Buttons ---------- */
-
-    .btn{
-        width:100%;
-        padding:14px;
-        text-align:center;
-    }
-
-    /* ---------- Blood Groups ---------- */
-
-    .blood-group-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-    }
-
-    .blood-card{
-        width:75px;
-        height:75px;
-        font-size:18px;
-    }
-
-    /* ---------- Cards ---------- */
-
-    .service-card,
-    .process-card,
-    .stat-card,
-    .faq-card,
-    .contact-box,
-    .hospital-card,
-    .donor-card{
-
-        padding:18px;
+        .dashboard-cards{
+            grid-template-columns:1fr;
+        }
 
     }
 
-    /* ---------- Forms ---------- */
+    /* ==========================================
+    LOGIN PAGE
+    ========================================== */
 
-    input,
-    select,
-    textarea{
-        font-size:15px;
+    @media (max-width:768px){
+
+        .login-box{
+
+            width:100%;
+            padding:25px;
+
+        }
+
     }
 
-    /* ---------- Footer ---------- */
+    /* ==========================================
+    TABLE RESPONSIVE
+    ========================================== */
 
-    .footer{
-        padding:40px 20px 20px;
-    }
+    .table-responsive{
 
-    .footer h3{
-        font-size:20px;
-    }
-
-    .footer p,
-    .footer a{
-        font-size:14px;
-    }
-
-}
-
-/* ==========================================
-   ADMIN PAGE
-========================================== */
-
-@media (max-width:768px){
-
-    .admin-container{
-        width:100%;
         overflow-x:auto;
+
     }
 
-    .admin-table{
-        min-width:700px;
-    }
-
-    .dashboard-cards{
-        grid-template-columns:1fr;
-    }
-
-}
-
-/* ==========================================
-   LOGIN PAGE
-========================================== */
-
-@media (max-width:768px){
-
-    .login-box{
+    table{
 
         width:100%;
-        padding:25px;
+        border-collapse:collapse;
 
     }
 
-}
+    table th,
+    table td{
 
-/* ==========================================
-   TABLE RESPONSIVE
-========================================== */
+        white-space:nowrap;
 
-.table-responsive{
+    }
 
-    overflow-x:auto;
+    /* ==========================================
+    IMAGE RESPONSIVE
+    ========================================== */
 
-}
+    img{
 
-table{
+        max-width:100%;
+        height:auto;
 
-    width:100%;
-    border-collapse:collapse;
+    }
 
-}
-
-table th,
-table td{
-
-    white-space:nowrap;
-
-}
-
-/* ==========================================
-   IMAGE RESPONSIVE
-========================================== */
-
-img{
-
-    max-width:100%;
-    height:auto;
-
-}
-
-/* ==========================================
-   FLEX HELPERS
-========================================== */
-
-.flex-column-mobile{
-
-    display:flex;
-
-}
-
-@media (max-width:768px){
+    /* ==========================================
+    FLEX HELPERS
+    ========================================== */
 
     .flex-column-mobile{
 
-        flex-direction:column;
+        display:flex;
 
     }
 
-}
+    @media (max-width:768px){
 
-/* ==========================================
-   HIDE ELEMENTS ON MOBILE
-========================================== */
+        .flex-column-mobile{
 
-@media (max-width:768px){
+            flex-direction:column;
 
-    .hide-mobile{
-
-        display:none !important;
+        }
 
     }
 
-}
+    /* ==========================================
+    HIDE ELEMENTS ON MOBILE
+    ========================================== */
 
-/* ==========================================
-   SHOW ONLY MOBILE
-========================================== */
+    @media (max-width:768px){
 
-.mobile-only{
+        .hide-mobile{
 
-    display:none;
+            display:none !important;
 
-}
+        }
 
-@media (max-width:768px){
+    }
+
+    /* ==========================================
+    SHOW ONLY MOBILE
+    ========================================== */
 
     .mobile-only{
 
-        display:block;
+        display:none;
 
     }
 
-}
+    @media (max-width:768px){
 
-/* ==========================================
-   SMOOTH SCROLL FIX
-========================================== */
+        .mobile-only{
 
-html{
+            display:block;
 
-    scroll-behavior:smooth;
+        }
 
-}
+    }
+
+    /* ==========================================
+    SMOOTH SCROLL FIX
+    ========================================== */
+
+    html{
+
+        scroll-behavior:smooth;
+
+    }
 
 
 
-/* ==========================================
-   END OF RESPONSIVE.CSS
-========================================== */
+    /* ==========================================
+    END OF RESPONSIVE.CSS
+    ========================================== */
