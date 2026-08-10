@@ -181,6 +181,28 @@
         border-bottom:1px solid #eee;
     }
 
+    /* ================= page banner ================= */
+
+     .page-banner {
+        min-height: 120px;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .page-banner h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .page-banner p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
     /* ================= HERO ================= */
 
     .hero{
