@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuToggle.addEventListener("click", function () {
 
-            navbar.classList.toggle("show");
+            navbar.classList.toggle("active");
 
         });
 
