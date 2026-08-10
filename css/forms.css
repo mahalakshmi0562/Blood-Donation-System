@@ -16,8 +16,8 @@
 
     background:
     linear-gradient(
-        rgba(198,40,40,.75),
-        rgba(123,0,0,.75)
+         rgba(214, 80, 80, 0.377),
+        rgba(214, 80, 80, 0.377)
     ),
     url("../images/donor.jpg");
 
@@ -49,7 +49,10 @@
 
 .form-box{
 
-    background:rgba(255,255,255,.15);
+    background:linear-gradient(
+        rgba(214, 80, 80, 0.377),
+        rgba(214, 80, 80, 0.377)
+    );
 
     backdrop-filter:blur(15px);
 
