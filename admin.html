@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Blood Donation System</title>
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= ADMIN HEADER ================= -->
+
+<header class="admin-header">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+<h2>
+
+Blood Donation 
+
+</h2>
+
+</div>
+
+<div class="admin-actions">
+
+<button id="darkBtn" class="icon-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="logoutBtn" class="btn btn-secondary">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+
+<h1>
+
+Admin Dashboard
+
+</h1>
+
+<p>
+
+Manage Registered Members, Blood Donors,
+Blood Requests and Contact Messages
+
+</p>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="admin-dashboard">
+
+<div class="section-title">
+
+<h2>
+
+Dashboard Overview
+
+</h2>
+
+<p>
+
+Monitor all Blood Donation System activities.
+
+</p>
+
+</div>
+
+<!-- ================= DASHBOARD CARDS ================= -->
+
+<div class="dashboard-cards">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-user"></i>
+
+<h2 id="userCount">
+
+0
+
+</h2>
+
+<p>
+
+Registered Users
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="donorCount">
+
+0
+
+</h2>
+
+<p>
+
+Blood Donors
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h2 id="requestCount">
+
+0
+
+</h2>
+
+<p>
+
+Blood Requests
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h2 id="messageCount">
+
+0
+
+</h2>
+
+<p>
+
+Contact Messages
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= REGISTERED USERS ================= -->
+
+<div class="admin-box">
+
+<div class="box-header">
+
+<h2>
+
+Registered Users
+
+</h2>
+
+<input
+type="text"
+id="searchUser"
+placeholder="Search Registered User">
+
+</div>
+
+<div class="table-responsive">
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Full Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Date of Birth</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="userTable">
+
+<!-- Loaded from admin.js -->
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ================= REGISTERED BLOOD DONORS ================= -->
+
+<div class="admin-box">
+
+<div class="box-header">
+
+<h2>
+
+Registered Blood Donors
+
+</h2>
+
+<input
+type="text"
+id="searchDonor"
+placeholder="Search Blood Donor">
+
+</div>
+
+<div class="table-responsive">
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Name</th>
+
+<th>Blood Group</th>
+
+<th>Phone</th>
+
+<th>Email</th>
+
+<th>City</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="donorTable">
+
+<!-- Loaded by admin.js -->
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+<!-- ================= BLOOD REQUESTS ================= -->
+
+<div class="admin-box">
+
+<div class="box-header">
+
+<h2>
+
+Blood Requests
+
+</h2>
+
+<input
+type="text"
+id="searchRequest"
+placeholder="Search Patient Name">
+
+</div>
+
+<div class="table-responsive">
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Patient Name</th>
+
+<th>Blood Group</th>
+
+<th>Hospital</th>
+
+<th>City</th>
+
+<th>Priority</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="requestTable">
+
+<!-- Loaded from admin.js -->
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ================= CONTACT MESSAGES ================= -->
+
+<div class="admin-box">
+
+<div class="box-header">
+
+<h2>
+
+Contact Messages
+
+</h2>
+
+<input
+type="text"
+id="searchMessage"
+placeholder="Search Contact">
+
+</div>
+
+<div class="table-responsive">
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Subject</th>
+
+<th>Message</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="messageTable">
+
+<!-- Loaded from admin.js -->
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+
+<h3>
+
+Blood Donation System
+
+</h3>
+
+<p>
+
+Admin Dashboard for managing users,
+blood donors, requests and contact messages.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li>
+
+<a href="register.html">
+
+Donor Registration
+
+</a>
+
+</li>
+
+<li>
+
+<a href="request.html">
+
+Blood Request
+
+</a>
+
+</li>
+
+<li>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Administrator
+
+</h3>
+
+<p>
+
+Only logged-in administrators
+can access this dashboard.
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 Blood Donation System.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/app.js"></script>
+
+<script src="js/admin.js"></script>
+
+<script src="js/darkmode.js"></script>
+
+</body>
+
+</html>

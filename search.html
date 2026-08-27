@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Blood Donor | Blood Donation System</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Blood Donation Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="register.html">
+                    Donor Register
+                </a>
+            </li>
+
+            <li>
+                <a href="search.html" class="active">
+                    Search Donor
+                </a>
+            </li>
+
+            <li>
+                <a href="request.html">
+                    Blood Request
+                </a>
+            </li>
+
+            <li>
+                <a href="hospital.html">
+                    Hospitals
+                </a>
+            </li>
+
+            <li>
+                <a href="compatibility.html">
+                    Compatibility
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+
+                <a href="login.html"
+                   class="login-btn">
+
+                    Login
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE BANNER
+===================================================== -->
+
+<section class="page-banner">
+
+    <h1>
+
+        Search Blood Donors
+
+    </h1>
+
+    <p>
+
+        Search registered donors by blood group.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH SECTION
+===================================================== -->
+
+<section class="register-section">
+
+    <div class="form-container">
+
+        <div class="form-box">
+
+
+            <!-- FORM HEADER -->
+
+            <div class="form-header">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <h2>
+
+                    Find Blood Donor
+
+                </h2>
+
+                <p>
+
+                    Select a blood group.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SEARCH FORM -->
+
+            <form id="searchForm">
+
+
+               
+                <!-- BLOOD GROUP -->
+
+                <div class="form-group">
+
+                    <label for="bloodGroup">
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                        Blood Group
+
+                    </label>
+
+                    <select id="bloodGroup">
+
+                        <option value="">
+
+                            All Blood Groups
+
+                        </option>
+
+                        <option value="A+">
+                            A+
+                        </option>
+
+                        <option value="A-">
+                            A-
+                        </option>
+
+                        <option value="B+">
+                            B+
+                        </option>
+
+                        <option value="B-">
+                            B-
+                        </option>
+
+                        <option value="AB+">
+                            AB+
+                        </option>
+
+                        <option value="AB-">
+                            AB-
+                        </option>
+
+                        <option value="O+">
+                            O+
+                        </option>
+
+                        <option value="O-">
+                            O-
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-group">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-search"></i>
+
+                        Search Donor
+
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+                <!-- ================= SEARCH RESULTS INSIDE FORM ================= -->
+
+<div class="search-results-box">
+
+    <div class="search-results-header">
+
+        <i class="fa-solid fa-users"></i>
+
+        <div>
+            <h3>Search Results</h3>
+
+            <p id="resultMessage">
+                Select a blood group.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div id="noResults" class="no-results">
+
+        <i class="fa-solid fa-user-slash"></i>
+
+        <h3>No Donor Found</h3>
+
+        <p>
+            No registered donor matches your search.
+        </p>
+
+    </div>
+
+
+    <!-- DONOR RESULTS -->
+
+    <div id="donorResults" class="donor-results">
+
+        <!-- search.js inserts donor cards here -->
+
+    </div>
+
+</div>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SEARCH INFORMATION
+===================================================== -->
+
+<section class="services">
+
+    <div class="section-title">
+
+        <h2>
+
+            Search Information
+
+        </h2>
+
+        <p>
+
+            Find registered blood donors quickly.
+
+        </p>
+
+    </div>
+
+
+    <div class="service-container">
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-droplet"></i>
+
+            <h3>
+
+                Search by Blood Group
+
+            </h3>
+
+            <p>
+
+                Select a blood group to display
+                registered donors with that blood group.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>
+
+                Registered Donors Only
+
+            </h3>
+
+            <p>
+
+                Search results are loaded from donors
+                registered through the Donor Registration page.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div>
+
+            <h3>
+
+                Blood Donation System
+
+            </h3>
+
+            <p>
+
+                Donate Blood, Save Lives.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="register.html">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="search.html">
+                        Search Donor
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+
+                Follow Us
+
+            </h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 Blood Donation System.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/app.js"></script>
+
+<script src="js/search.js"></script>
+
+
+</body>
+
+</html>

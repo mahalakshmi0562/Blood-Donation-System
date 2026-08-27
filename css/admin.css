@@ -1,0 +1,414 @@
+/* ==========================================
+   ADMIN HEADER
+========================================== */
+
+.admin-header {
+   width:100%;
+    background:#ffffff;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 6%;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+
+/* LOGO */
+
+.admin-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-header .logo img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+.admin-header .logo h2 {
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #d62828;
+}
+
+.admin-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#d62828;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.icon-btn:hover{
+    transform:rotate(20deg);
+    background:#ffe5e5;
+}
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.admin-dashboard{
+    width:90%;
+    max-width:1400px;
+    margin:50px auto;
+}
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 40px;
+}
+
+.dashboard-card{
+    background:#fff;
+    border-radius:15px;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    border-top:5px solid #d62828;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card i{
+    font-size:45px;
+    color:#d62828;
+    margin-bottom:15px;
+}
+
+.dashboard-card h2{
+    font-size:38px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.dashboard-card p{
+    color:#666;
+    font-size:17px;
+    font-weight:500;
+}
+
+/* ==========================================
+   ADMIN BOX
+========================================== */
+
+.admin-box{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    margin-top:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.box-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.box-header h2{
+    color:#d62828;
+    font-size:28px;
+}
+
+.box-header input{
+    width:320px;
+    max-width:100%;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.box-header input:focus{
+    border-color:#d62828;
+    box-shadow:0 0 8px rgba(214,40,40,.25);
+}
+/* ==========================================
+   TABLE
+========================================== */
+
+.table-responsive{
+    width:100%;
+    overflow-x:auto;
+}
+
+.admin-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.admin-table thead{
+    background:#d62828;
+    color:#fff;
+}
+
+.admin-table th{
+    padding:15px;
+    text-align:left;
+    font-size:16px;
+    white-space:nowrap;
+}
+
+.admin-table td{
+    padding:14px;
+    border-bottom:1px solid #e6e6e6;
+    font-size:15px;
+    color:#444;
+    vertical-align:middle;
+}
+
+.admin-table tbody tr{
+    transition:.3s;
+}
+
+.admin-table tbody tr:hover{
+    background:#fff5f5;
+}
+
+.admin-table td:last-child,
+.admin-table th:last-child{
+    text-align:center;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn-danger{
+    background:#d62828;
+    color:#fff;
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-danger:hover{
+    background:#b71c1c;
+}
+
+.btn-secondary{
+    background:#555;
+    color:#fff;
+    border:none;
+}
+
+.btn-secondary:hover{
+    background:#333;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+    margin-top:60px;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+    background:#1a1a1a;
+    color:#fff;
+}
+
+body.dark .admin-box,
+body.dark .dashboard-card{
+    background:#2b2b2b;
+    color:#fff;
+}
+
+body.dark .dashboard-card h2,
+body.dark .box-header h2{
+    color:#fff;
+}
+
+body.dark .dashboard-card p{
+    color:#ddd;
+}
+
+body.dark .admin-table td{
+    color:#eee;
+    border-bottom:1px solid #444;
+}
+
+body.dark .admin-table tbody tr:hover{
+    background:#3a3a3a;
+}
+
+body.dark .box-header input{
+    background:#333;
+    color:#fff;
+    border:1px solid #555;
+}
+
+body.dark .box-header input::placeholder{
+    color:#bbb;
+}
+
+body.dark .icon-btn{
+    background:#333;
+    color:#fff;
+}
+
+body.dark .icon-btn:hover{
+    background:#444;
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.status{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status.active{
+    background:#d4edda;
+    color:#155724;
+}
+
+.status.pending{
+    background:#fff3cd;
+    color:#856404;
+}
+
+.status.critical{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.admin-header{
+    padding:15px 20px;
+}
+
+.dashboard-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.box-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.box-header input{
+    width:100%;
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-cards{
+    grid-template-columns:1fr;
+}
+
+.admin-header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.admin-actions{
+    justify-content:center;
+}
+
+.admin-header .logo h2{
+    font-size:22px;
+}
+
+.dashboard-card h2{
+    font-size:32px;
+}
+
+.admin-box{
+    padding:20px;
+}
+
+.admin-table th,
+.admin-table td{
+    padding:10px;
+    font-size:14px;
+}
+
+}
+
+@media(max-width:480px){
+
+.dashboard-card{
+    padding:25px 15px;
+}
+
+.dashboard-card i{
+    font-size:36px;
+}
+
+.dashboard-card h2{
+    font-size:28px;
+}
+
+.icon-btn{
+    width:40px;
+    height:40px;
+}
+
+.btn-danger{
+    padding:6px 12px;
+    font-size:13px;
+}
+
+}

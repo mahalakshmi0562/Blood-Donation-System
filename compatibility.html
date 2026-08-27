@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blood Compatibility Checker | Blood Donation System</title>
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/forms.css">
+
+<link rel="stylesheet" href="css/animation.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="images/logo.png" alt="Logo">
+
+        <h2>Blood Donation</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="register.html">Donor Register</a></li>
+
+            <li><a href="search.html">Search Donor</a></li>
+
+            <li><a href="donors.html">Donors</a></li>
+
+            <li><a href="request.html">Blood Request</a></li>
+
+            <li>
+
+                <a href="hospital.html" >
+
+                    Hospitals
+
+                </a>
+
+            </li>
+
+            <li><a href="compatibility.html" class="active">Compatibility</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+
+                <a href="login.html"
+                   class="login-btn">
+
+                    Login
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="menu-toggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</header>
+
+<!-- PAGE BANNER -->
+
+
+<section class="page-banner">
+
+
+<h1>
+Blood Compatibility Checker
+</h1>
+
+
+<p>
+Find compatible blood groups for donation and receiving
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- COMPATIBILITY SECTION -->
+
+
+<section class="register-section">
+
+
+<div class="form-container scale-up">
+
+
+<div class="form-box">
+
+
+
+<div class="form-header">
+
+
+<i class="fa-solid fa-droplet"></i>
+
+
+<h2>
+Check Blood Compatibility
+</h2>
+
+
+<p>
+Select blood group to know donation compatibility
+</p>
+
+
+</div>
+
+
+
+
+<div class="form-group">
+
+
+<label>
+Select Blood Group
+</label>
+
+
+<select id="bloodGroup">
+
+
+<option value="">
+-- Select Blood Group --
+</option>
+
+
+<option value="A+">
+A+
+</option>
+
+
+<option value="A-">
+A-
+</option>
+
+
+<option value="B+">
+B+
+</option>
+
+
+<option value="B-">
+B-
+</option>
+
+
+<option value="AB+">
+AB+
+</option>
+
+
+<option value="AB-">
+AB-
+</option>
+
+
+<option value="O+">
+O+
+</option>
+
+
+<option value="O-">
+O-
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+<div class="button-group">
+
+
+<button 
+class="btn btn-primary"
+onclick="checkCompatibility()">
+
+Check Compatibility
+
+</button>
+
+
+</div>
+
+<div id="resultCard"
+         class="compatibility-result">
+
+        <!-- RESULT HEADER -->
+
+        <div class="compatibility-result-header">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3>
+                    Compatibility Result
+                </h3>
+
+                <p>
+                    Blood compatibility information
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SELECTED BLOOD GROUP -->
+
+        <div class="result-blood-group">
+
+            <span>
+                Selected Blood Group
+            </span>
+
+            <strong id="resultGroup">
+                -
+            </strong>
+
+        </div>
+
+
+        <!-- DONATE -->
+
+        <div class="compatibility-row">
+
+            <div class="compatibility-icon">
+
+                <i class="fa-solid fa-hand-holding-droplet"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Can Donate To
+                </h4>
+
+                <p id="donateTo">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECEIVE -->
+
+        <div class="compatibility-row">
+
+            <div class="compatibility-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Can Receive From
+                </h4>
+
+                <p id="receiveFrom">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+
+
+<div class="copyright">
+
+<p>
+
+© <span id="year"></span>
+Blood Donation System.
+All Rights Reserved.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+<!-- JS -->
+
+
+<script src="js/app.js"></script>
+
+<script src="js/compatibility.js"></script>
+
+
+
+</body>
+
+</html>
