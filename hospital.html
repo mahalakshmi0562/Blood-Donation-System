@@ -362,88 +362,149 @@
 
         }
 
-
         /* ==========================================
-           RESPONSIVE
+           RESPONSIVE - HOSPITAL PAGE
         ========================================== */
-
-        @media (max-width: 800px) {
-
-            .hospital-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-        }
-
+        
         @media (max-width: 768px) {
-
+        
+            /* Hospital Results */
+            .hospital-results-section {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 30px;
+            }
+        
+            /* Hospital Grid */
             .hospital-grid {
-
                 grid-template-columns: 1fr;
-
+                gap: 20px;
+                width: 100%;
             }
-
-        }
-
-        @media (max-width: 576px) {
-
-            .hospital-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-        }
-
-        @media (max-width: 480px) {
-
-            .hospital-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-        }
-
-        @media (max-width: 500px) {
-
-            .hospital-stats {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
+        
+            /* Hospital Card */
             .hospital-card {
-
+                width: 100%;
+                box-sizing: border-box;
                 padding: 18px;
-
             }
-
-
+        
+            /* Hospital Card Header */
             .hospital-card-header {
-
                 align-items: flex-start;
-
+                gap: 12px;
             }
-
-
+        
+            /* Hospital Logo */
             .hospital-logo {
-
                 width: 60px;
-
                 height: 60px;
-
                 min-width: 60px;
-
                 font-size: 25px;
-
             }
-
+        
+            /* Hospital Title */
+            .hospital-title {
+                min-width: 0;
+                flex: 1;
+            }
+        
+            .hospital-title h3 {
+                font-size: 18px;
+                line-height: 1.4;
+                overflow-wrap: anywhere;
+            }
+        
+            /* Hospital Details */
+            .hospital-details {
+                gap: 15px;
+            }
+        
+            .hospital-detail {
+                gap: 12px;
+                min-width: 0;
+            }
+        
+            .hospital-detail div {
+                min-width: 0;
+                flex: 1;
+            }
+        
+            .hospital-detail span,
+            .hospital-detail p {
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        
+            /* Hospital Buttons */
+            .hospital-card-footer {
+                flex-direction: column;
+                width: 100%;
+            }
+        
+            .hospital-card-footer .btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        
+            /* Statistics */
+            .hospital-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        
+            .hospital-stat {
+                width: 100%;
+                box-sizing: border-box;
+            }
         }
-
+        
+        
+        /* ==========================================
+           SMALL MOBILE
+        ========================================== */
+        
+        @media (max-width: 480px) {
+        
+            .hospital-results-section {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        
+            .hospital-card {
+                padding: 16px;
+                border-radius: 12px;
+            }
+        
+            .hospital-card-header {
+                gap: 10px;
+            }
+        
+            .hospital-logo {
+                width: 55px;
+                height: 55px;
+                min-width: 55px;
+                font-size: 23px;
+            }
+        
+            .hospital-title h3 {
+                font-size: 17px;
+            }
+        
+            .hospital-title span {
+                font-size: 13px;
+            }
+        
+            .hospital-detail {
+                gap: 10px;
+            }
+        
+            .hospital-detail i {
+                width: 20px;
+                min-width: 20px;
+            }
+        }
+       
     </style>
 
 </head>
