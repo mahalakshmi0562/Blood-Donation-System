@@ -387,7 +387,7 @@ let defaultHospitals = [
                     <div class="hospital-detail">
 
                         <i class="fa-solid fa-location-dot"></i>
-
+                        <div>
                             <strong>
                                 Address
                             </strong>
@@ -395,14 +395,14 @@ let defaultHospitals = [
                             <br>
 
                             ${hospital.address}
-
+                        </div>
                     </div>
 
 
                     <div class="hospital-detail">
 
                         <i class="fa-solid fa-phone"></i>
-
+                        <div>
                             <strong>
                                 Phone
                             </strong>
@@ -410,14 +410,14 @@ let defaultHospitals = [
                             <br>
 
                             ${hospital.phone}
-
+                        </div>
                     </div>
 
 
                     <div class="hospital-detail">
 
                         <i class="fa-solid fa-envelope"></i>
-
+                           <div>
                             <strong>
                                 Email
                             </strong>
@@ -425,7 +425,7 @@ let defaultHospitals = [
                             <br>
 
                             ${hospital.email}
-
+                        </div>
                     </div>
 
 
