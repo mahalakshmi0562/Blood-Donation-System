@@ -1,443 +1,468 @@
- /* ==========================================
-           HOSPITAL SEARCH RESULTS
-        ========================================== */
+/* =====================================================
+   HOSPITAL PAGE
+   Hospital Results + Hospital Cards
+===================================================== */
 
-        .hospital-results-section {
 
-            
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-top: 40px;
+/* =====================================================
+   RESULTS SECTION
+===================================================== */
 
-        }
-
-
-        .hospital-results-title {
-
-            text-align: center;
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .hospital-results-title h2 {
-
-            margin-bottom: 8px;
-
-        }
-
-
-        .hospital-results-title p {
-
-            color: #777;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL GRID
-        ========================================== */
-
-        .hospital-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 25px;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL CARD
-        ========================================== */
-
-        .hospital-card {
-
-            background: #ffffff;
-
-            border-radius: 14px;
-
-            padding: 25px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.08);
-
-            border: 1px solid #eeeeee;
-
-            transition:
-                transform .3s ease,
-                box-shadow .3s ease;
-
-        }
-
-
-        .hospital-card:hover {
-
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 12px 30px
-                rgba(0, 0, 0, 0.12);
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL HEADER
-        ========================================== */
-
-        .hospital-card-header {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 18px;
-
-            margin-bottom: 20px;
-
-            padding-bottom: 18px;
-
-            border-bottom:
-                1px solid #eeeeee;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL LOGO
-        ========================================== */
-
-        .hospital-logo {
-
-            width: 70px;
-
-            height: 70px;
-
-            min-width: 70px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: #d62828;
-
-            color: #ffffff;
-
-            border-radius: 12px;
-
-            font-size: 30px;
-
-        }
-
-
-        .hospital-title h3 {
-
-            margin: 0 0 6px;
-
-            font-size: 20px;
-
-        }
-
-
-        .hospital-title span {
-
-            color: #777;
-
-            font-size: 14px;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL DETAILS
-        ========================================== */
-
-        .hospital-details {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 20px;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .hospital-detail {
-
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 20px;
-
-            color: #555;
-
-        }
-
-
-        .hospital-detail i {
-
-            width: 22px;
-
-            color: #d62828;
-
-            margin-top: 3px;
-
-        }
-
-
-        .hospital-detail strong {
-
-            color: #222;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL FOOTER
-        ========================================== */
-
-        
-        .footer{
-            text-align: center;
-        }
-
-        /* ==========================================
-           NO RESULTS
-        ========================================== */
-
-        .no-hospital {
-
-            display: none;
-
-            text-align: center;
-
-            background: #ffffff;
-
-            border-radius: 14px;
-
-            padding: 45px 20px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.08);
-
-        }
-
-
-        .no-hospital i {
-
-            font-size: 55px;
-
-            color: #d62828;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .no-hospital h3 {
-
-            margin-bottom: 8px;
-
-        }
-
-
-        .no-hospital p {
-
-            color: #777;
-
-        }
-
-
-        /* ==========================================
-           HOSPITAL STATISTICS
-        ========================================== */
-
-        .hospital-stats {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-
-            margin-top: 30px;
-            margin-bottom: 20px;
-
-        }
-
-
-        .hospital-stat {
-
-            text-align: center;
-
-            padding: 20px;
-
-            background: #ffffff;
-
-            border-radius: 12px;
-
-            box-shadow:
-                0 5px 20px
-                rgba(0, 0, 0, 0.06);
-
-        }
-
-
-        .hospital-stat i {
-
-            color: #d62828;
-
-            font-size: 28px;
-
-            margin-bottom: 8px;
-
-        }
-
-
-        .hospital-stat h3 {
-
-            font-size: 25px;
-
-            margin: 5px 0;
-
-        }
-
-
-        .hospital-stat p {
-
-            color: #777;
-
-            margin: 0;
-
-        }
-
-
-        /* ==========================================
-   RESPONSIVE - HOSPITAL PAGE
-========================================== */
-
-@media (max-width: 768px) {
-
-    /* Hospital Results */
 .hospital-results-section {
     width: 100%;
-    margin: 30px 0 0;
-    padding: 0 10px;
+    margin: 40px auto 0;
+    padding: 0 8%;
     box-sizing: border-box;
 }
 
-/* Hospital Grid */
+
+/* =====================================================
+   RESULTS TITLE
+===================================================== */
+
+.hospital-results-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hospital-results-title h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hospital-results-title p {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   HOSPITAL STATISTICS
+===================================================== */
+
+.hospital-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.hospital-stat {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.hospital-stat i {
+    font-size: 40px;
+    color: #d62828;
+    margin-bottom: 10px;
+}
+
+.hospital-stat h3 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.hospital-stat p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* =====================================================
+   HOSPITAL GRID
+   LAPTOP / DESKTOP = 2 COLUMNS
+===================================================== */
+
 .hospital-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
     width: 100%;
-    gap: 15px;
     box-sizing: border-box;
 }
 
-/* Hospital Card */
+
+/* =====================================================
+   HOSPITAL CARD
+===================================================== */
+
 .hospital-card {
     width: 100%;
     max-width: 100%;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
-    padding: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
-    /* Hospital Card Header */
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   HOSPITAL CARD HEADER
+===================================================== */
+
+.hospital-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HOSPITAL ICON
+===================================================== */
+
+.hospital-logo {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d62828;
+    color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.hospital-logo i {
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   HOSPITAL TITLE
+===================================================== */
+
+.hospital-title {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.hospital-title h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.hospital-title span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+}
+
+.hospital-title span i {
+    color: #777;
+    margin-right: 4px;
+}
+
+
+/* =====================================================
+   HOSPITAL DETAILS
+===================================================== */
+
+.hospital-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   EACH DETAIL
+===================================================== */
+
+.hospital-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.hospital-detail > i {
+    width: 20px;
+    min-width: 20px;
+    color: #d62828;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.hospital-detail > div {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.hospital-detail strong {
+    color: #333;
+    font-size: 14px;
+}
+
+.hospital-detail {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Prevent long address/email from overflowing */
+
+.hospital-detail div {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   HOSPITAL CARD FOOTER
+===================================================== */
+
+.hospital-card-footer {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+.hospital-card-footer .btn {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NO HOSPITAL RESULTS
+===================================================== */
+
+.no-hospital {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.no-hospital i {
+    font-size: 45px;
+    color: #d62828;
+    margin-bottom: 15px;
+}
+
+.no-hospital h3 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.no-hospital p {
+    color: #777;
+}
+
+.footer{
+    text-align: center;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .hospital-results-section {
+        padding: 0 5%;
+    }
+
+    .hospital-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ONLY MOBILE CHANGES HERE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Results section matches statistics width */
+
+    .hospital-results-section {
+        width: 100%;
+        margin: 30px 0 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+
+    /* Statistics become one column */
+
+    .hospital-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+    }
+
+
+    /* Hospital grid becomes one column */
+
+    .hospital-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+
+    /* Hospital card matches statistics box width */
+
+    .hospital-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+
+    /* Header stays inside card */
+
     .hospital-card-header {
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    /* Hospital Logo */
-    .hospital-logo {
-        width: 60px;
-        height: 60px;
-        min-width: 60px;
-        font-size: 25px;
-    }
-
-    /* Hospital Title */
-    .hospital-title {
+        width: 100%;
         min-width: 0;
-        flex: 1;
+        gap: 10px;
     }
+
+
+    /* Hospital name can wrap */
+
+    .hospital-title {
+        flex: 1;
+        min-width: 0;
+    }
+
 
     .hospital-title h3 {
-        font-size: 18px;
-        line-height: 1.4;
-        overflow-wrap: anywhere;
-    }
-
-    /* Hospital Details */
-    .hospital-details {
-        gap: 15px;
-    }
-
-    .hospital-detail {
-        gap: 12px;
-        min-width: 0;
-    }
-
-    .hospital-detail div {
-        min-width: 0;
-        flex: 1;
-    }
-
-    .hospital-detail span,
-    .hospital-detail p {
+        font-size: 16px;
         overflow-wrap: anywhere;
         word-break: break-word;
     }
 
-    /* Hospital Buttons */
-    .hospital-card-footer {
-        flex-direction: column;
+
+    /* Details stay inside card */
+
+    .hospital-detail {
         width: 100%;
+        min-width: 0;
     }
+
+
+    .hospital-detail > div {
+        flex: 1;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* Buttons stay inside card */
+
+    .hospital-card-footer {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 
     .hospital-card-footer .btn {
         width: 100%;
-        margin-top: 5px;
-        box-sizing: border-box;
+        flex: none;
     }
 
-    /* Statistics */
-    .hospital-stats {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .hospital-stat {
-        width: 100%;
-        box-sizing: border-box;
-    }
 }
 
 
-/* ==========================================
+/* =====================================================
    SMALL MOBILE
-========================================== */
+===================================================== */
 
 @media (max-width: 480px) {
 
     .hospital-results-section {
-        margin-left: 15px;
-        margin-right: 15px;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
+
+
+    .hospital-results-title {
+        margin-bottom: 25px;
+    }
+
+
+    .hospital-results-title h2 {
+        font-size: 26px;
+    }
+
+
+    .hospital-results-title p {
+        font-size: 14px;
+    }
+
+
+    .hospital-stat {
+        width: 100%;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+
+    .hospital-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
 
     .hospital-card {
         width: 100%;
@@ -447,293 +472,39 @@
         box-sizing: border-box;
     }
 
-    .hospital-card-header {
-        gap: 10px;
-    }
 
     .hospital-logo {
-        width: 55px;
-        height: 55px;
-        min-width: 55px;
-        font-size: 23px;
+        width: 43px;
+        min-width: 43px;
+        height: 43px;
     }
+
 
     .hospital-title h3 {
-        font-size: 17px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
+
     .hospital-title span {
-        font-size: 13px;
+        font-size: 12px;
     }
+
 
     .hospital-detail {
         gap: 10px;
-    }
-
-    .hospital-detail i {
-        width: 20px;
-        min-width: 20px;
-    }
-}
-
-/* =========================================================
-   MOBILE RESPONSIVE FIX
-   Desktop / Laptop design will NOT be affected
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* ---------- GLOBAL MOBILE FIX ---------- */
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    * {
-        box-sizing: border-box;
+        font-size: 13px;
     }
 
 
-    /* ---------- MAIN PAGE CONTAINER ---------- */
-
-    .hospital-page,
-    .hospital-container,
-    .hospital-content {
-        width: 100%;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+    .hospital-detail strong {
+        font-size: 13px;
     }
 
 
-    /* ---------- HOSPITAL HERO / TOP TITLE ---------- */
-
-    .hospital-hero,
-    .hospital-banner {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .hospital-hero h1,
-    .hospital-banner h1 {
-        font-size: 27px;
-        line-height: 1.2;
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
-        word-break: normal;
-    }
-
-    .hospital-hero p,
-    .hospital-banner p {
-        font-size: 15px;
-        line-height: 1.5;
-        text-align: center;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-
-    /* ---------- IMAGE / BACKGROUND SECTION ---------- */
-
-    .hospital-section,
-    .hospital-background {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-
-    /* ---------- FIND HOSPITALS CARD ---------- */
-
-    .hospital-search,
-    .hospital-search-card,
-    .find-hospital,
-    .find-hospitals {
-        width: calc(100% - 24px);
-        max-width: 340px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* ---------- SEARCH CARD CONTENT ---------- */
-
-    .hospital-search input,
-    .hospital-search select,
-    .hospital-search button,
-    .hospital-search-card input,
-    .hospital-search-card select,
-    .hospital-search-card button,
-    .find-hospital input,
-    .find-hospital select,
-    .find-hospital button,
-    .find-hospitals input,
-    .find-hospitals select,
-    .find-hospitals button {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* ---------- HOSPITAL GRID ---------- */
-
-    .hospital-grid {
-        width: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
-        justify-items: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* ---------- INDIVIDUAL HOSPITAL CARD ---------- */
-
-    .hospital-card {
-        width: calc(100% - 24px);
-        max-width: 340px;
-        min-width: 0;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-
-    /* ---------- HOSPITAL CARD HEADER ---------- */
-
-    .hospital-card-header {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        box-sizing: border-box;
-    }
-
-
-    /* ---------- HOSPITAL TITLE ---------- */
-
-    .hospital-title {
-        min-width: 0;
-        flex: 1;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        word-break: normal;
-    }
-
-
-    .hospital-title h3,
-    .hospital-title h4 {
-        max-width: 100%;
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.3;
-        overflow-wrap: break-word;
-    }
-
-
-    /* ---------- HOSPITAL CARD BODY ---------- */
-
-    .hospital-card-body,
-    .hospital-card-content {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-    }
-
-
-    /* ---------- ADDRESS / TEXT ---------- */
-
-    .hospital-card p,
-    .hospital-card div,
-    .hospital-card span {
-        max-width: 100%;
-        overflow-wrap: break-word;
-    }
-
-
-    /* ---------- IMAGES / ICONS ---------- */
-
-    .hospital-card img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    /* ---------- TABLET-SIZE MOBILE ---------- */
-
-    @media (max-width: 480px) {
-
-        .hospital-hero h1,
-        .hospital-banner h1 {
-            font-size: 25px;
-        }
-
-        .hospital-hero p,
-        .hospital-banner p {
-            font-size: 14px;
-        }
-
-        .hospital-search,
-        .hospital-search-card,
-        .find-hospital,
-        .find-hospitals {
-            width: calc(100% - 20px);
-            max-width: 340px;
-        }
-
-        .hospital-card {
-            width: calc(100% - 20px);
-            max-width: 340px;
-        }
-
-        .hospital-card-header {
-            gap: 8px;
-        }
-
-        .hospital-title h3,
-        .hospital-title h4 {
-            font-size: 14px;
-        }
-    }
-
-
-    /* ---------- SMALL MOBILE ---------- */
-
-    @media (max-width: 375px) {
-
-        .hospital-hero h1,
-        .hospital-banner h1 {
-            font-size: 23px;
-        }
-
-        .hospital-hero p,
-        .hospital-banner p {
-            font-size: 13px;
-        }
-
-        .hospital-search,
-        .hospital-search-card,
-        .find-hospital,
-        .find-hospitals {
-            width: calc(100% - 16px);
-        }
-
-        .hospital-card {
-            width: calc(100% - 16px);
-        }
-
+    .hospital-card-footer {
+        margin-top: 15px;
+        padding-top: 12px;
     }
 
 }
