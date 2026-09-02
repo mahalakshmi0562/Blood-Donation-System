@@ -1610,6 +1610,161 @@ section{
     }
 
 }
+/* ==========================================
+   REG.CSS
+========================================== */
+/* ==========================================
+   TERMS AND CONDITIONS DIALOG
+========================================== */
+
+.terms-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.terms-overlay.active {
+    display: flex;
+}
+
+.terms-dialog {
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+
+    background: #ffffff;
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.terms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    background: #d62828;
+    color: white;
+}
+
+.terms-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.terms-header button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Content */
+
+.terms-content {
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.terms-content h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-size: 17px;
+    color: #222;
+}
+
+.terms-content h3:first-child {
+    margin-top: 0;
+}
+
+.terms-content p {
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+.terms-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 18px 22px;
+
+    border-top: 1px solid #eee;
+}
+
+.terms-footer .btn {
+    min-width: 120px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .terms-overlay {
+        padding: 15px;
+    }
+
+    .terms-dialog {
+        max-height: 90vh;
+    }
+
+    .terms-header {
+        padding: 15px 18px;
+    }
+
+    .terms-header h2 {
+        font-size: 19px;
+    }
+
+    .terms-content {
+        padding: 20px;
+    }
+
+    .terms-content h3 {
+        font-size: 16px;
+    }
+
+    .terms-content p {
+        font-size: 14px;
+    }
+
+    .terms-footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .terms-footer .btn {
+        width: 100%;
+    }
+}
 
 /* ==========================================
    END OF STYLE.CSS
