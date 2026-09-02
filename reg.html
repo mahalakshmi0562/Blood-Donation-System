@@ -201,7 +201,7 @@ required>
 
 <label for="agree">
 
-I accept the Terms and Conditions.
+I accept the <a href="#" id="termsLink"> Terms and Conditions</a>.
 
 </label>
 
@@ -249,6 +249,82 @@ Already have an account?
 
 </div>
 
+  <!-- ================= TERMS DIALOG ================= -->
+
+<div class="terms-overlay" id="termsOverlay">
+
+    <div class="terms-dialog">
+
+        <div class="terms-header">
+            <h2>Terms and Conditions</h2>
+
+            <button type="button" id="closeTerms">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="terms-content">
+
+            <h3>1. Account Registration</h3>
+            <p>
+                Users must provide accurate and complete information
+                when creating an account.
+            </p>
+
+            <h3>2. Donor Information</h3>
+            <p>
+                Donors must provide correct personal and contact
+                information.
+            </p>
+
+            <h3>3. Blood Donation</h3>
+            <p>
+                Blood donation should be performed according to
+                applicable medical and safety guidelines.
+            </p>
+
+            <h3>4. Information Accuracy</h3>
+            <p>
+                Users are responsible for providing accurate information.
+            </p>
+
+            <h3>5. Privacy</h3>
+            <p>
+                User information should be handled responsibly and used
+                only for the Blood Donation System.
+            </p>
+
+            <h3>6. User Responsibility</h3>
+            <p>
+                Users must not provide false information or misuse
+                the Blood Donation System.
+            </p>
+
+            <h3>7. Acceptance</h3>
+            <p>
+                By creating an account, the user confirms that they have
+                read and accepted these Terms and Conditions.
+            </p>
+
+        </div>
+
+        <div class="terms-footer">
+
+            <button type="button" class="btn btn-primary" id="acceptTerms">
+                <i class="fa-solid fa-check"></i>
+                Accept
+            </button>
+
+            <button type="button" class="btn btn-secondary" id="closeTermsBtn">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  
 </section>
 
 <!-- ================= BENEFITS ================= -->
