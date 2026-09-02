@@ -141,3 +141,62 @@ window.location.href = "login.html";
     });
 
 });
+
+// ==========================================
+// TERMS AND CONDITIONS DIALOG
+// ==========================================
+
+const termsLink = document.getElementById("termsLink");
+const termsOverlay = document.getElementById("termsOverlay");
+const closeTerms = document.getElementById("closeTerms");
+const closeTermsBtn = document.getElementById("closeTermsBtn");
+const acceptTerms = document.getElementById("acceptTerms");
+const agreeCheckbox = document.getElementById("agree");
+
+
+// Open Terms Dialog
+termsLink.addEventListener("click", function (event) {
+
+    event.preventDefault();
+
+    termsOverlay.classList.add("active");
+
+});
+
+
+// Close using X button
+closeTerms.addEventListener("click", function () {
+
+    termsOverlay.classList.remove("active");
+
+});
+
+
+// Close using Close button
+closeTermsBtn.addEventListener("click", function () {
+
+    termsOverlay.classList.remove("active");
+
+});
+
+
+// Accept Terms
+acceptTerms.addEventListener("click", function () {
+
+    agreeCheckbox.checked = true;
+
+    termsOverlay.classList.remove("active");
+
+});
+
+
+// Close when clicking outside dialog
+termsOverlay.addEventListener("click", function (event) {
+
+    if (event.target === termsOverlay) {
+
+        termsOverlay.classList.remove("active");
+
+    }
+
+});
